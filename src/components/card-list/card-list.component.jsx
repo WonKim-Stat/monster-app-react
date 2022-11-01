@@ -7,7 +7,7 @@ const CardList = (props) => {
     <div className="card-list">
       {monsters.map((monster) => {
         // const { name, email, id } = monster; // desctructuring properties off the monster another optimization
-        return <Card monster={monster} />;
+        return <Card key={monster.id} monster={monster} />;
       })}
     </div>
   );

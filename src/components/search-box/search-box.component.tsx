@@ -1,6 +1,17 @@
+import { ChangeEventHandler } from "react";
 import "/Users/wonseokkim/complete-react/monster-app-react/src/components/search-box/search-box.styles.css";
 
-const SearchBox = ({ className, placeholder, onChangeHandler }) => {
+type SearchBoxProps = {
+  className: string;
+  placeholder: string;
+  onChangeHandler: ChangeEventHandler<HTMLInputElement>;
+};
+
+const SearchBox = ({
+  className,
+  placeholder,
+  onChangeHandler,
+}: SearchBoxProps) => {
   return (
     <div>
       <input
